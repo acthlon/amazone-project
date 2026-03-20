@@ -1,16 +1,13 @@
-import {cart} from "./checkout.js";
+import {cart} from "../data/cart.js";
 import {products} from "../data/products.js";
 
 
-let finalHtml = '';
-let productGrid = document.querySelector('.products-grid');
-renderProducts();
-totalCartQuantity();
 
+renderProducts();
       
 
+console.log(renderProducts())
 
-productGrid.innerHTML = finalHtml;
 
 const addToCartButton = document.querySelectorAll('.js-add-to-cart')
 addToCartButton.forEach((cartButton,index)=>{
@@ -22,13 +19,16 @@ cartButton.addEventListener('click',()=>{
   const productId = dataObject.productId;
   
   addToCart(productId)
-  totalCartQuantity()
+
+  updatecartNoHtml()
 
   });
 });
 
 
+ updatecartNoHtml()
 
+  
 
 let selectQuantity = document.querySelectorAll('.js-select-option')
 
@@ -42,8 +42,31 @@ selectQuantity.forEach((select)=>{
 
 
 
+
+
+export function totalCartQuantity(){
+  let totalQuantity = 0;
+
+  cart.forEach((item)=>{
+      totalQuantity += item.quantity;
+  })
+
+  return totalQuantity;
+  // console.log(totalQuantity)
+  //console.log(typeof totalQuantity)
+  }
+
+
+export function saveCartToLocalStorage(){
+  localStorage.setItem('cart',JSON.stringify(cart))
+}
+
+
+
+
 function renderProducts(){
 
+  let finalHtml = '';
   products.forEach((product,index)=>{
     
     const html = `<div class="product-container">
@@ -65,7 +88,7 @@ function renderProducts(){
     </div>
 
     <div class="product-price">
-      $${product.priceCents}
+      $${((product.priceCents / 100).toFixed(2))}
     </div>
 
     <div class="product-quantity-container " >
@@ -95,13 +118,19 @@ function renderProducts(){
     </button>
   </div>`
 
-  finalHtml += html
+  finalHtml += html;
+  
   })
+
+  const productGrid = document.querySelector('.js-products-grid');
+  productGrid.innerHTML = finalHtml;
 };
 
 
 
-
+function  updatecartNoHtml(){
+  document.querySelector('.js-cart-quantity').innerHTML = totalCartQuantity()
+}
 
 
 
@@ -146,28 +175,9 @@ function addToCart(productId){
                                               id : productId,
                                               quantity : 1
                                           })
-
-
-  localStorage.setItem('cart',JSON.stringify(cart))
-  console.log(cart)
+  saveCartToLocalStorage()
+  updatecartNoHtml()
 };
-
-
-
-
-
-
-function totalCartQuantity(){
-  let totalQuantity = 0;
-
-  cart.forEach((item)=>{
-      totalQuantity += item.quantity;
-  })
-  document.querySelector('.js-cart-quantity').innerHTML = totalQuantity
-
-  //console.log(totalQuantity)
-  //console.log(typeof totalQuantity)
-  }
 
 
 
@@ -187,12 +197,12 @@ function selectedquantityCartUpdate(productId,select){
   if(matchingItem){
 
       matchingItem.quantity += Number(select.value)
-      totalCartQuantity()
-      console.log(cart)
+      saveCartToLocalStorage()
+      updatecartNoHtml()
+
+
   }else{
       addToCart(productId)
-      totalCartQuantity()
       console.log(cart)
   };
 };
-    
