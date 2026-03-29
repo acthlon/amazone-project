@@ -2,12 +2,10 @@ import {cart} from "../data/cart.js";
 import {products} from "../data/products.js";
 
 
-
-renderProducts();
-      
-
-console.log(renderProducts())
-
+if (document.querySelector('.js-products-grid')){
+  renderProducts();
+  updatecartNoHtml();
+}
 
 const addToCartButton = document.querySelectorAll('.js-add-to-cart')
 addToCartButton.forEach((cartButton,index)=>{
@@ -26,7 +24,7 @@ cartButton.addEventListener('click',()=>{
 });
 
 
- updatecartNoHtml()
+
 
   
 
@@ -52,8 +50,6 @@ export function totalCartQuantity(){
   })
 
   return totalQuantity;
-  // console.log(totalQuantity)
-  //console.log(typeof totalQuantity)
   }
 
 

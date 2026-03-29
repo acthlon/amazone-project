@@ -1,0 +1,1 @@
+export const productsInOrder = JSON.parse(localStorage.getItem('productsInOrder')) || []

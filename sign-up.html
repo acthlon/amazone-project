@@ -1,0 +1,489 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel Apparel - Join Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1f1f1f 100%);
+    }
+    
+    .form-bg {
+      background: rgba(15, 15, 15, 0.95);
+      backdrop-filter: blur(12px);
+    }
+    
+    .gold-btn {
+      background: linear-gradient(90deg, #facc15, #eab308);
+      transition: all 0.3s ease;
+    }
+    
+    .gold-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(250, 204, 21, 0.3);
+    }
+    
+    .input-field {
+      background-color: #111827;
+      border: 1px solid #374151;
+      transition: all 0.2s;
+    }
+    
+    .input-field:focus {
+      border-color: #facc15;
+      box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.1);
+      outline: none;
+    }
+  </style>
+</head>
+<body class="bg-black text-white gradient-bg min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="border-b border-gray-800 bg-black/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center text-black font-bold text-xl">M</div>
+          <span class="text-2xl font-semibold tracking-tight">Marvel</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#" class="hover:text-yellow-400 transition">Home</a>
+          <a href="#" class="hover:text-yellow-400 transition">Materials</a>
+          <a href="#" class="hover:text-yellow-400 transition">Styles</a>
+          <a href="#" class="hover:text-yellow-400 transition">Measurements</a>
+          <a href="#" class="hover:text-yellow-400 transition">Blog</a>
+          <a href="#" class="hover:text-yellow-400 transition">Track Order</a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-5">
+        <button class="p-2 hover:text-yellow-400 transition">
+          <i class="fa-solid fa-magnifying-glass text-xl"></i>
+        </button>
+        <button class="p-2 hover:text-yellow-400 transition relative">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span class="absolute -top-1 -right-1 bg-yellow-400 text-black text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+        </button>
+        <button class="px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg transition text-sm">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="min-h-[calc(100vh-140px)] flex items-center justify-center py-12 px-6 relative overflow-hidden">
+    <!-- Background accent circle -->
+    <div class="absolute left-10 bottom-20 w-80 h-80 border border-yellow-400/10 rounded-full"></div>
+    
+    <div class="max-w-md w-full">
+      <!-- Logo -->
+      <div class="flex justify-center mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-yellow-300 to-amber-500 rounded-2xl flex items-center justify-center shadow-xl shadow-yellow-500/30">
+          <span class="text-4xl">✦</span>
+        </div>
+      </div>
+
+      <div class="text-center mb-10">
+        <h1 class="text-5xl font-bold tracking-tighter">Join Us</h1>
+        <p class="text-gray-400 mt-3 text-lg">Create your custom tailoring journey</p>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form-bg rounded-3xl p-8 border border-gray-700 shadow-2xl">
+        <form class="space-y-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-gray-400 mb-1.5">First Name</label>
+              <input type="text" value="John" 
+                     class="input-field w-full px-5 py-3.5 rounded-2xl text-sm focus:ring-1">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-400 mb-1.5">Last Name</label>
+              <input type="text" value="Doe" 
+                     class="input-field w-full px-5 py-3.5 rounded-2xl text-sm focus:ring-1">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-gray-400 mb-1.5">Email Address</label>
+            <input type="email" value="you@example.com" 
+                   class="input-field w-full px-5 py-3.5 rounded-2xl text-sm focus:ring-1">
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-gray-400 mb-1.5">Password</label>
+            <div class="relative">
+              <input type="password" value="password123" 
+                     class="input-field w-full px-5 py-3.5 rounded-2xl text-sm focus:ring-1">
+              <button type="button" class="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-gray-400 mb-1.5">Confirm Password</label>
+            <div class="relative">
+              <input type="password" value="password123" 
+                     class="input-field w-full px-5 py-3.5 rounded-2xl text-sm focus:ring-1">
+              <button type="button" class="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input type="checkbox" class="mt-1 accent-yellow-400" checked>
+            <p class="text-xs text-gray-400">
+              I agree to the <a href="#" class="text-yellow-400 hover:underline">Terms of Service</a> and 
+              <a href="#" class="text-yellow-400 hover:underline">Privacy Policy</a>
+            </p>
+          </div>
+
+          <button type="button"
+                  class="gold-btn w-full py-4 rounded-2xl font-semibold text-black flex items-center justify-center gap-3 text-base hover:brightness-110">
+            Create Account
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="my-8 flex items-center gap-4">
+          <div class="flex-1 h-px bg-gray-700"></div>
+          <span class="text-gray-500 text-sm font-medium">Or sign up with</span>
+          <div class="flex-1 h-px bg-gray-700"></div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <button class="flex items-center justify-center gap-3 border border-gray-700 hover:border-gray-500 py-4 rounded-2xl transition">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google" class="h-5">
+            <span class="text-sm font-medium">Google</span>
+          </button>
+          <button class="flex items-center justify-center gap-3 border border-gray-700 hover:border-gray-500 py-4 rounded-2xl transition">
+            <i class="fa-brands fa-github text-xl"></i>
+            <span class="text-sm font-medium">GitHub</span>
+          </button>
+        </div>
+
+        <p class="text-center text-sm text-gray-400 mt-8">
+          Already have an account? 
+          <a href="#" class="text-yellow-400 hover:underline font-medium">Sign in here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-gray-800 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <!-- Column 1 -->
+      <div>
+        <div class="flex items-center gap-2 mb-6">
+          <div class="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center text-black font-bold text-xl">M</div>
+          <span class="text-2xl font-semibold">Marvel</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Crafting exceptional garments with premium materials and expert tailoring since our founding.
+        </p>
+        <div class="flex gap-5 mt-8">
+          <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold mb-6 text-yellow-400">Quick Links</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li><a href="#" class="hover:text-white transition">Materials</a></li>
+          <li><a href="#" class="hover:text-white transition">Tailoring Styles</a></li>
+          <li><a href="#" class="hover:text-white transition">Custom Measurements</a></li>
+          <li><a href="#" class="hover:text-white transition">Blog & News</a></li>
+          <li><a href="#" class="hover:text-white transition">Order Tracking</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div>
+        <h3 class="font-semibold mb-6 text-yellow-400">Customer Service</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li><a href="#" class="hover:text-white transition">My Account</a></li>
+          <li><a href="#" class="hover:text-white transition">Size Guide</a></li>
+          <li><a href="#" class="hover:text-white transition">Care Instructions</a></li>
+          <li><a href="#" class="hover:text-white transition">Returns & Exchanges</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div>
+        <h3 class="font-semibold mb-6 text-yellow-400">Contact Us</h3>
+        <div class="text-sm text-gray-400 space-y-3">
+          <p>Lagos, Nigeria</p>
+          <p>+234 800 000 0000</p>
+          <p>info@marvelapparel.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+      © 2024 Marvel Apparel and Clothing. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel Apparel - Join Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, 
+        #0a0a0a 0%, 
+        #111827 40%, 
+        #1f2937 70%, 
+        #312e1f 100%);
+    }
+
+    .form-bg {
+      background: rgba(15, 15, 15, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(234, 179, 8, 0.15);
+    }
+
+    .gold-accent {
+      background: linear-gradient(90deg, #facc15, #eab308, #ca8a04);
+    }
+
+    .input-field {
+      background-color: #0f172a;
+      border: 1px solid #334155;
+      transition: all 0.3s ease;
+    }
+    
+    .input-field:focus {
+      border-color: #facc15;
+      box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.15);
+      outline: none;
+    }
+
+    .glow-circle {
+      background: radial-gradient(circle, rgba(234, 179, 8, 0.08) 0%, transparent 70%);
+    }
+  </style>
+</head>
+<body class="text-white min-h-screen hero-bg overflow-hidden">
+
+  <!-- Navbar -->
+  <nav class="border-b border-gray-800/50 bg-black/70 backdrop-blur-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 bg-gradient-to-br from-yellow-300 to-amber-500 rounded-2xl flex items-center justify-center text-black font-bold text-2xl shadow-inner">M</div>
+          <span class="text-2xl font-semibold tracking-tighter">Marvel</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#" class="hover:text-amber-400 transition-colors">Home</a>
+          <a href="#" class="hover:text-amber-400 transition-colors">Materials</a>
+          <a href="#" class="hover:text-amber-400 transition-colors">Styles</a>
+          <a href="#" class="hover:text-amber-400 transition-colors">Measurements</a>
+          <a href="#" class="hover:text-amber-400 transition-colors">Blog</a>
+          <a href="#" class="hover:text-amber-400 transition-colors">Track Order</a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <button class="p-2.5 hover:text-amber-400 transition"><i class="fa-solid fa-magnifying-glass text-xl"></i></button>
+        <button class="p-2.5 hover:text-amber-400 transition relative">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+        </button>
+        <button class="px-7 py-2.5 bg-amber-400 hover:bg-yellow-300 text-black font-semibold rounded-2xl transition text-sm shadow-lg shadow-amber-500/30">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Signup Section -->
+  <div class="min-h-[calc(100vh-80px)] flex items-center justify-center relative px-6 py-12">
+    <!-- Decorative Glow Circle -->
+    <div class="absolute left-20 bottom-32 w-96 h-96 glow-circle rounded-full pointer-events-none"></div>
+
+    <div class="max-w-md w-full relative z-10">
+      <!-- Brand Icon -->
+      <div class="flex justify-center mb-8">
+        <div class="w-16 h-16 bg-gradient-to-br from-amber-300 via-yellow-400 to-amber-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-amber-500/40 rotate-12 hover:rotate-0 transition-transform">
+          <span class="text-5xl drop-shadow">✧</span>
+        </div>
+      </div>
+
+      <div class="text-center mb-10">
+        <h1 class="text-5xl font-bold tracking-tighter text-white">Join Us</h1>
+        <p class="text-gray-400 mt-3 text-lg">Create your custom tailoring journey</p>
+      </div>
+
+      <!-- Form -->
+      <div class="form-bg rounded-3xl p-9 shadow-2xl">
+        <form class="space-y-6">
+          <div class="grid grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-medium">First Name</label>
+              <input type="text" value="John" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-medium">Last Name</label>
+              <input type="text" value="Doe" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-medium">Email Address</label>
+            <input type="email" value="you@example.com" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-medium">Password</label>
+            <div class="relative">
+              <input type="password" value="••••••••" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+              <button type="button" class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-amber-400">
+                <i class="fa-solid fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-medium">Confirm Password</label>
+            <div class="relative">
+              <input type="password" value="••••••••" class="input-field w-full px-6 py-4 rounded-2xl text-sm">
+              <button type="button" class="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-amber-400">
+                <i class="fa-solid fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="terms" class="accent-amber-400 w-4 h-4" checked>
+            <label for="terms" class="text-xs text-gray-400">
+              I agree to the <a href="#" class="text-amber-400 hover:underline">Terms of Service</a> and 
+              <a href="#" class="text-amber-400 hover:underline">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="button" 
+                  class="gold-accent w-full py-5 rounded-2xl font-semibold text-black text-base flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-xl shadow-amber-500/30">
+            Create Account
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="flex items-center gap-4 my-8">
+          <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+          <span class="text-gray-500 text-sm font-medium px-4">Or sign up with</span>
+          <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <button class="flex items-center justify-center gap-3 border border-gray-700 hover:border-amber-400 py-4 rounded-2xl transition-all">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt="Google" class="h-5">
+            <span class="text-sm font-medium">Google</span>
+          </button>
+          <button class="flex items-center justify-center gap-3 border border-gray-700 hover:border-amber-400 py-4 rounded-2xl transition-all">
+            <i class="fa-brands fa-github text-2xl"></i>
+            <span class="text-sm font-medium">GitHub</span>
+          </button>
+        </div>
+
+        <p class="text-center mt-8 text-sm text-gray-400">
+          Already have an account? 
+          <a href="#" class="text-amber-400 font-medium hover:underline">Sign in here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black/90 border-t border-gray-800 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-9 h-9 bg-gradient-to-br from-yellow-300 to-amber-500 rounded-2xl flex items-center justify-center text-black font-bold text-2xl">M</div>
+          <span class="text-2xl font-semibold">Marvel</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Crafting exceptional garments with premium materials and expert tailoring since our founding.
+        </p>
+        <div class="flex gap-6 mt-10 text-xl text-gray-400">
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-6 text-amber-400">Quick Links</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li><a href="#" class="hover:text-white">Materials</a></li>
+          <li><a href="#" class="hover:text-white">Tailoring Styles</a></li>
+          <li><a href="#" class="hover:text-white">Custom Measurements</a></li>
+          <li><a href="#" class="hover:text-white">Blog & News</a></li>
+          <li><a href="#" class="hover:text-white">Order Tracking</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-6 text-amber-400">Customer Service</h3>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li><a href="#" class="hover:text-white">My Account</a></li>
+          <li><a href="#" class="hover:text-white">Size Guide</a></li>
+          <li><a href="#" class="hover:text-white">Care Instructions</a></li>
+          <li><a href="#" class="hover:text-white">Returns & Exchanges</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-6 text-amber-400">Contact Us</h3>
+        <div class="text-sm text-gray-400 space-y-2">
+          <p>Lagos, Nigeria</p>
+          <p>+234 800 000 0000</p>
+          <p>info@marvelapparel.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center text-xs text-gray-500 mt-16 border-t border-gray-800 pt-8">
+      © 2024 Marvel Apparel and Clothing. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
